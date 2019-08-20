@@ -1,4 +1,5 @@
-//
+
+
 // This Class is for a basic Calculator
 //
 // It encapsulates (consists of) all off the data that it needs to work and stores
@@ -8,7 +9,7 @@
 // Human might want to perform with a standard calculator.
 //
 
-// START CLASS DEFINITION
+// // START CLASS DEFINITION
 class Calculator_class {
     constructor() {
         this.clear_calculation_result(); // Start with empty total
@@ -56,11 +57,17 @@ class Calculator_class {
     // Multiplies the 2 numbers passed in and returns the result
     // It also updates the running total property
     // TODO: Student implement the method for multiplication
-   
+    multiplication (first_number, second_number) {
+        this.update_current_calculation_result(first_number * second_number);
+        return this.current_calculation_result;
+    };
     // Divides the 2 numbers passed in and returns the result
     // It also updates the running total property
     // TODO: Student implement the method for division
-
+    division(first_number, second_number) {
+        this.update_current_calculation_result(first_number / second_number);
+        return this.current_calculation_result;
+    };
 }
 
 // END CLASS DEFINITION
@@ -76,8 +83,21 @@ function main() {
 
     // TODO: Student implement functionality to keep asking the User for next math operation
     //  until they enter 'x' to exit
-    // Start by just displaying the current total
-    console.log(`Total : ${calculator_instance.get_current_calculation_result()}`);
+
+    current_operation = prompt("Enter the math operation to be performed (ADD)")
+        .toUpperCase();
+       while (current_operation !=="x")
+{
+
+}
+
+      console.log(`Total : ${calculator_instance.get_current_calculation_result()}`);
+    {
+
+    }
+
+// Start by just displaying the current total
+//     console.log(`Total : ${calculator_instance.get_current_calculation_result()}`);
 
     // Get the operation to perform from the User
     current_operation = prompt("Enter the math operation to be performed (ADD)")
@@ -89,9 +109,21 @@ function main() {
 
     // Perform the operation and display the results
     // TODO: Student to implement support for CLR (clear), SUB (subtract), MULT (multiply), and DIV (division Calculator methods
+
     switch (current_operation) {
         case "ADD":
             alert(`New sum Total : ${calculator_instance.add(first_int, second_int)}`);
+            break;
+        case "SUB":
+            alert(`New sub Total : ${calculator_instance.subtract(first_int, second_int)}`);
+            break;
+        case "MULT":
+            alert(`New mult Total : ${calculator_instance.mult(first_int, second_int)}`);
+            break;
+        case "DIV":
+            alert(`New div Total : ${calculator_instance.div(first_int, second_int)}`);
+            break;
+
     }
     // Print the final calculation total in console for debugging purposes
     console.log(`Final Total : ${calculator_instance.get_current_calculation_result()}`);
