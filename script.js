@@ -87,14 +87,14 @@ function main() {
     current_operation = prompt("Enter the math operation to be performed (ADD)")
         .toUpperCase();
        while (current_operation !=="x")
-{
-
-}
+        {
+            // NOTE : there is nothing in your while loop
+        }
 
       console.log(`Total : ${calculator_instance.get_current_calculation_result()}`);
-    {
-
-    }
+        {
+            // NOTE : empty code bracket?
+        }
 
 // Start by just displaying the current total
 //     console.log(`Total : ${calculator_instance.get_current_calculation_result()}`);
@@ -102,6 +102,7 @@ function main() {
     // Get the operation to perform from the User
     current_operation = prompt("Enter the math operation to be performed (ADD)")
         .toUpperCase();
+        // NOTE : update your prompt
 
     // Get the 2 numbers for the operation
     let first_int = parseInt(prompt(`Enter the 1st number for ${current_operation}`));
@@ -123,6 +124,7 @@ function main() {
         case "DIV":
             alert(`New div Total : ${calculator_instance.div(first_int, second_int)}`);
             break;
+            // NOTE : no functinality for CLR
 
     }
     // Print the final calculation total in console for debugging purposes
